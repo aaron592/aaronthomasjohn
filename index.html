@@ -290,7 +290,7 @@ Author URL: http://w3layouts.com
         <h3 class="head">Stay Updated! </h3>
         <p class="my-3 head"> Get subscribed and connect with us</p>
       </div>
-      <form id="get-form" action="index.html" method="post" class="subscribe-wthree pt-2 mt-5">
+      <form id="submit-form" action="#" method="post" class="subscribe-wthree pt-2 mt-5">
         <div class="d-flex flex-wrap subscribe-wthree-field">
           <input class="form-control" type="email" placeholder="Enter your email..." name="email" required="">
           <button class="btn form-control btn-primary" type="submit">Subscribe</button>
@@ -491,15 +491,15 @@ Author URL: http://w3layouts.com
         });
       </script>
 	       <script>
-        $("#get-form").submit((e)=>{
+        $("#submit-form").submit((e)=>{
             e.preventDefault()
             $.ajax({
                 url:"https://script.google.com/macros/s/AKfycbwQInfBO2z4PcPDDcHXN3XWMnpvmNnVSea8_EzGXQ/exec",
-                data:$("#get-form").serialize(),
+                data:$("#submit-form").serialize(),
                 method:"post",
                 success:function (response){
                     alert("Form submitted successfully")
-                    window.location.reload()
+                    window.location.reload(about.html)
                     //window.location.href="https://www.aaronthomas.ml/"
                 },
                 error:function (err){
